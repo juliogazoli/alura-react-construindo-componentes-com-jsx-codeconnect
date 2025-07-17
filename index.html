@@ -14,19 +14,21 @@
 </head>
 
 <body>
+    <div id="root"></div>
+
     <!-- REACT -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/19.1.0/cjs/react.production.min.js"
-        integrity="sha512-ucTHJmK7Vbk1b/20lV/YDoAy2C23upVS8WP7+QBFkkktwDICiljB3uEWxUa+lZRQ+eNWAfbbOSLJlXf90hE7LA=="
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"
+        integrity="sha512-8Q6Y9XnTbOE+JNvjBQwJ2H8S+UV4uA6hiRykhdtIyDYZ2TprdNmWOUaKdGzOhyr4dCyk287OejbPvwl7lrfqrQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- REACT-DOM -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/19.1.0/cjs/react-dom.production.min.js"
-        integrity="sha512-9hGW3rPVB0mnERkKPrNuX34/GuDYxqGUYok+yDwOzf43pKJJSqsJsnd52KR15AgrdbfV49DGVjHnXTuhwLfJBg=="
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"
+        integrity="sha512-MOCpqoRoisCTwJ8vQQiciZv0qcpROCidek3GTFS6KTk2+y7munJIlKCVkFCYY+p3ErYFXCjmFjnfTTRSC1OHWQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- BABEL-STANDALONE -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.28.1/babel.min.js"
-        integrity="sha512-SSqlwbIuz75Gz/tzPjqnxeFSMChqliTzO0op6pmAWyMiu9JGCsoVlJKflK4HrJNBH4SjryMrmLV4gGFn5qru/w=="
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.3/babel.min.js"
+        integrity="sha512-MIXku7j6pJ0hqd2T4WXZMGerp3BU9B91rfLRDp/McDBNNdnwTD+yLJaz9AHcYXT6k16dYTkG9S2KRPGxaBIfBQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script type="text/babel">
@@ -41,6 +43,9 @@
                 <h2 className='form__texto'>Boas-vindas! Faça seu login.</h2>
             )
         }
+
+        ReactDOM.createRoot(document.getElementById('root')).render(<Titulo />)
+
     </script>
 </body>
 
