@@ -65,11 +65,8 @@
         }
 
         function PaginaDeLogin() {
-            let email = 'teste@teste.com'
-            function substituiValorDoCampo(novoValor) {
-                email = novoValor
-                console.log(email)
-            }
+            const [email, setEmail] = React.useState('')
+
             return (
                 <div className='container-login'>
                     <img src='./img/imagem-login.png' alt='Uma mulher negra de cabelos crespos usando óculos e mexendo no computador, também há o logo da Codeconnect' />
@@ -81,7 +78,7 @@
                                 tipo='email'
                                 placeholder='Digite o seu e-mail ou usuário'
                                 value={email}
-                                setValor={substituiValorDoCampo}
+                                setValor={setEmail}
                             />
                             <CampoDeDigitacao label='Senha'
                                 tipo='password'
