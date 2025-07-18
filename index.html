@@ -44,14 +44,16 @@
             )
         }
 
-        function CampoDeDigitacao({ label, tipo, placeholder }) {
+        function CampoDeDigitacao({ label, tipo, placeholder, value, setValor }) {
             return (
                 <div className='form__campo-digitacao'>
                     <label for='email'>{label}</label>
                     <input type={tipo}
                         placeholder={placeholder}
                         required
-                        id='e-mail' />
+                        id='email'
+                        value={value}
+                        onChange={(evento) => setValor(evento.target.value)} />
                 </div>
             )
         }
@@ -63,6 +65,11 @@
         }
 
         function PaginaDeLogin() {
+            let email = 'teste@teste.com'
+            function substituiValorDoCampo(novoValor) {
+                email = novoValor
+                console.log(email)
+            }
             return (
                 <div className='container-login'>
                     <img src='./img/imagem-login.png' alt='Uma mulher negra de cabelos crespos usando óculos e mexendo no computador, também há o logo da Codeconnect' />
@@ -72,7 +79,10 @@
                             <Subtitulo>Boas-vindas! Faça seu login.</Subtitulo>
                             <CampoDeDigitacao label='E-mail ou usuário'
                                 tipo='email'
-                                placeholder='Digite o seu e-mail ou usuário' />
+                                placeholder='Digite o seu e-mail ou usuário'
+                                value={email}
+                                setValor={substituiValorDoCampo}
+                            />
                             <CampoDeDigitacao label='Senha'
                                 tipo='password'
                                 placeholder='Digite a sua senha' />
